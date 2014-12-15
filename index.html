@@ -613,7 +613,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 
 
 
-	$.getJSON('/files.php', function(data) {
+	$.getJSON('files.php', function(data) {
 		$.each(data, function(key, val) {
 			markerData.push([val.user_id, val.encoded, val.author, val.email, val.type, val.website, val.location, val.latitude, val.longitude, val.datetime, val.date, val.date_link, val.time, val.duration, val.equipment, val.binaural, val.description, val.cc, val.soundfile, val.download, val.complete, val.sound_ext, val.image_lg, val.image_sm, val.sidelink
 				])
