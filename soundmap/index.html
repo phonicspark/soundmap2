@@ -10,52 +10,52 @@
 <meta Http-Equiv="Pragma" Content="no-cache">
 <meta Http-Equiv="Expires" Content="0">
 
-<script type="text/javascript" src="./soundmapstyle.js"></script>
+<script type="text/javascript" src="./js/soundmapstyle.js"></script>
 
 
 
-<title>Water Sound Map</title>
+<title>Portland Sound Map</title>
 
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="./style.css" />
-<link rel="stylesheet" href="./bootstrap.icon-large.min.css" />
-<link rel="stylesheet" href="./bootstrap.min.css" />
+<link rel="stylesheet" href="./includes/style.css" />
+<link rel="stylesheet" href="./includes/bootstrap.icon-large.min.css" />
+<link rel="stylesheet" href="./includes/bootstrap.min.css" />
 
-<link rel="stylesheet" type="text/css" href="./fancybox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="./js/fancybox/fancybox.css" media="screen" />
 
 
-<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
 
-<script type="text/javascript" src="./jquery.tinysort.min.js"></script>
+<script type="text/javascript" src="./js/jquery.tinysort.min.js"></script>
 
-<script type="text/javascript" src="./bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 
-<script type='text/javascript' src='./swfobject.js'></script>
+<script type='text/javascript' src='./embed/swfobject.js'></script>
 
-<script src="./mediaelement-and-player-fix.js"></script>
-<link rel="stylesheet" href="./mediaelementplayer.css" />
+<script src="./js/mediaelementplayer/mediaelement-and-player-fix.js"></script>
+<link rel="stylesheet" href="./js/mediaelementplayer/mediaelementplayer.css" />
 
-<script type="text/javascript" src="./jquery.mousewheel-3.0.4.pack.js"></script>
-<script type="text/javascript" src="./fancybox.pack.js"></script>
+<script type="text/javascript" src="./js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="./js/fancybox/fancybox.pack.js"></script>
 
-<script type="text/javascript" src="./jquery.jscrollpane.min.js"></script>
-<script type="text/javascript" src="./jquery.mousewheel.js"></script>
-<script type="text/javascript" src="./mwheelIntent.js"></script>
+<script type="text/javascript" src="./js/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="./js/jscrollpane/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="./js/jscrollpane/mwheelIntent.js"></script>
 
-<link rel="stylesheet" type="text/css" href="./jquery.jscrollpane.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="./js/jscrollpane/jquery.jscrollpane.css" media="screen" />
 
-<script type="text/javascript" src="./infobox.js"></script>
+<script type="text/javascript" src="./js/infobox.js"></script>
 
-<script type="text/javascript" src="./fancy.js"></script>
+<script type="text/javascript" src="./js/fancy.js"></script>
 
-<script type='text/javascript' src='./jwplayer.js'></script>
+<script type='text/javascript' src='./embed/jwplayer/jwplayer.js'></script>
 
-<script type="text/javascript" src="./mktree.js"></script>
-<link rel="stylesheet" href="./mktree.css" type="text/css" />
+<script type="text/javascript" src="./js/mktree.js"></script>
+<link rel="stylesheet" href="./includes/mktree.css" type="text/css" />
 
 <script type="text/javascript">
 
@@ -174,7 +174,7 @@ function initialize() {
 			zIndex: null,
 			boxStyle: {width: "290px"},
 			closeBoxMargin: "10px 0px 0px 0px",
-			closeBoxURL: "http://portlandsoundmap.com/img/close.png",
+			closeBoxURL: "./img/close.png",
 			infoBoxClearance: new google.maps.Size(1, 1),
 			isHidden: false, 
 			pane: "floatPane",
@@ -433,27 +433,27 @@ if(inBounds==1){
 
 function createMarker(encoded, latitude, longitude, type, user_id, author, sidelink, location, soundfile, download, complete, equipment, binaural, duration, image_lg, image_sm, time, date, description, sound_ext) {
 
-	var staticIcon = new google.maps.MarkerImage('http://portlandsoundmap.com/img/marker_yellow.png',
+	var staticIcon = new google.maps.MarkerImage('img/marker_yellow.png',
 	new google.maps.Size(19, 27),
 	new google.maps.Point(0,0),
 	new google.maps.Point(0,0));
 
-	var mobileIcon = new google.maps.MarkerImage('http://portlandsoundmap.com/img/marker_yellow.png',
+	var mobileIcon = new google.maps.MarkerImage('img/marker_yellow.png',
 	new google.maps.Size(18, 18),
 	new google.maps.Point(0,0),
 	new google.maps.Point(0,0));
 
-	var staticbinauralIcon = new google.maps.MarkerImage('http://portlandsoundmap.com/img/binaural_yellow.png',
+	var staticbinauralIcon = new google.maps.MarkerImage('img/binaural_yellow.png',
 	new google.maps.Size(18, 18),
 	new google.maps.Point(0,0),
 	new google.maps.Point(0,0));
 
-	var mobilebinauralIcon = new google.maps.MarkerImage('http://portlandsoundmap.com/img/binaural_yellow.png',
+	var mobilebinauralIcon = new google.maps.MarkerImage('img/binaural_yellow.png',
 	new google.maps.Size(18, 18),
 	new google.maps.Point(0,0),
 	new google.maps.Point(0,0));
 
-	var shadow = new google.maps.MarkerImage('http://portlandsoundmap.com/img/shadow-sine.png',
+	var shadow = new google.maps.MarkerImage('img/shadow-sine.png',
 	new google.maps.Size(38, 25),
 	new google.maps.Point(0,0),
 	new google.maps.Point(-2, 0));
@@ -471,7 +471,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	var file_path;
 	file_path="http://admin.portlandsoundmap.com";
 
-	var play = '<audio id="soundPlayer" src="'+file_path+'./media/audio'+soundfile+'" width="100%" height="30"></audio>';
+	var play = '<audio id="soundPlayer" src="'+file_path+'/media/audio/'+soundfile+'" width="100%" height="30"></audio>';
 	var image;
 	if(image_sm=='no_photo.png') image_sm='';
 	if(image_sm!='') image = "<div id='inst_image'><img src='"+file_path+"/media/image/photo/"+image_sm+"' width='250' height='188' alt=''/></div>";
@@ -556,7 +556,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	function soundPlayer(){
 
 		var soundPlayer = new MediaElementPlayer('#soundPlayer', {
-			pluginPath:'.http://portlandsoundmap.com/js/mediaelementplayer/',
+			pluginPath:'./js/mediaelementplayer/',
 		    success: function (mediaElement, domObject) { 
 					mediaElement.pause();
 					mediaElement.play();
@@ -1014,14 +1014,14 @@ function removeOverlays(){
 	<div id="map"></div>
 
 	<div id="top">
-		<span class="link" onclick="resetMap()" id="topTitle">Water &nbsp; Sound &nbsp; Map</span>
+		<span class="link" onclick="resetMap()" id="topTitle">Portland &nbsp; Sound &nbsp; Map</span>
 
 		<ul class="dropdownMenu left">
 			<li><span id="aboutLink" class="overlayLink link caps" onclick="toggleAbout();"><strong>About</strong><!--<i class="icon-white icon-info-sign"></i>--></span>
 			<li><span id="contributeLink" class="overlayLink link caps" onclick="toggleContribute();"><strong>Upload</strong><!--<i class="icon-white icon-upload"></i>--></li>
-			<!-- <li><span style="margin: 0px 5px 0px 2px; border-left:1px solid #777;"></span></li>
-			<!-- <li><span id="autoplay" class="link caps" onclick="autoplayMap();"><strong>Autoplay</strong><!--<i class="icon-white icon-play"></i>--></span></li>
-			<!-- <li><span id="shuffle" class="link caps" onclick="soundtrackRand();"><strong>Shuffle</strong><!--<i class="icon-white icon-random"></i>--></span></li>
+			<li><span style="margin: 0px 5px 0px 2px; border-left:1px solid #777;"></span></li>
+			<li><span id="autoplay" class="link caps" onclick="autoplayMap();"><strong>Autoplay</strong><!--<i class="icon-white icon-play"></i>--></span></li>
+			<li><span id="shuffle" class="link caps" onclick="soundtrackRand();"><strong>Shuffle</strong><!--<i class="icon-white icon-random"></i>--></span></li>
 			<!--<i class="icon-white icon-search">BROWSE</i>-->
 <!--	<li>
 				<span class="icon-bar"></span>
@@ -1045,7 +1045,7 @@ function removeOverlays(){
 
 
 	<div id="about" class="overlay">
-		<h3>About the Water Sound Map</h3>
+		<h3>About the Portland Sound Map</h3>
 		<p>The Portland Sound Map is a collaboration between Soundscape Planner and Designer, Kenya Williams and Montreal Sound Artist, Max Stein. This web-based soundscape archive allows users to explore, experience and upload audio field recordings to a map of Portland, Oregon.</p>
 		<p>This sound map serves as a means to increase the public’s soundscape awareness and profile the acoustic uniqueness and character of the city’s neighborhoods, spaces and places. In addition, this map functions as an audible time capsule with the goal of preserving sounds before they become extinct. Sound maps are in many ways the most effective archival tool of the cultural, historical, artistic, political and technological characteristics of the soundscape since the soundscape is constantly changing. Soundmapping promotes active listening and the Portland Sound Map offers an interface for users to explore and listen to the sonic fabric of the city with purpose and attention that is not often given to sound phenomena of our environment.</p>
 		<p>It is our goal for people to engage in attentive listening by visiting and experiencing these points of acoustic interest firsthand. This encourages increased soundscape awareness, providing people the opportunity to promote and protect the soundscape and build stronger senses of place and community.</p>
@@ -1073,11 +1073,10 @@ function removeOverlays(){
 		<div id="browse" style="overflow:auto;"><div style="margin-left:-15px; text-align:left;">
 			<ul class="mktree" id="tree1">
 				<li class="all liClosed">All Sounds [<span class="num"></span>]<ul></ul></li>
-				<ul><a href="http://admin.portlandsoundmap.com/media/audio/0004_peninsula_park_18-07-13.mp3">Year</a></ul>
 				<li class="recent liOpen">Recent Uploads [<span class="num"></span>]<ul></ul></li>
 				<li class="date liOpen">Date
 					<ul class="year">
-						<li class="liClosed"><a href="http://admin.portlandsoundmap.com/media/audio/0004_peninsula_park_18-07-13.mp3">Year</a></li>
+						<li class="liClosed">Year</li>
 					</ul>
 					<ul class="month">
 						<li class="liClosed">Month</li>						
