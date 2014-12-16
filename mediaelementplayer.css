@@ -75,10 +75,10 @@
 	width: 100px;
 	height: 100px;
 	margin: -50px 0 0 -50px;
-	background: url(bigplay.svg) no-repeat;
+	background: url(http://phonicspark.github.com/soundmap2/css/bigplay.svg) no-repeat;
 }
 .no-svg .mejs-overlay-button { 
-	background-image: url(bigplay.png);
+	background-image: url(http://phonicspark.github.com/soundmap2/css/bigplay.png);
 }
 .mejs-overlay:hover .mejs-overlay-button {
 	background-position: 0 -100px ;
@@ -453,7 +453,7 @@
 
 .mejs-controls div.mejs-horizontal-volume-slider {
 	height: 26px;
-	width: 50px;
+	width: 60px;
 	position: relative;
 }
 
