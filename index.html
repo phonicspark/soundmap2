@@ -453,7 +453,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	new google.maps.Point(0,0),
 	new google.maps.Point(0,0));
 
-	var shadow = new google.maps.MarkerImage('http://portlandsoundmap.com/img/shadow-sine.png',
+	var shadow = new google.maps.MarkerImage('http://phonicspark.github.io/soundmap/icon2.png',
 	new google.maps.Size(38, 25),
 	new google.maps.Point(0,0),
 	new google.maps.Point(-2, 0));
@@ -556,7 +556,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	function soundPlayer(){
 
 		var soundPlayer = new MediaElementPlayer('#soundPlayer', {
-			pluginPath:'.http://portlandsoundmap.com/js/mediaelementplayer/',
+			pluginPath:'http://portlandsoundmap.com/js/mediaelementplayer/',
 		    success: function (mediaElement, domObject) { 
 					mediaElement.pause();
 					mediaElement.play();
