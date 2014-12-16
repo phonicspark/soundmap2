@@ -507,7 +507,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	
 	if(binaural=="X") iconType = "static binaural"; else iconType = "static";
 		
-	infoWindowContent = "<div id=\"map_main\"><div id=\"map_title\">" + sidelink + "</div>" + image +"<div id=\"map_media\">"+ play + "</div>" + "<div id=\"map_info\"><ul><li><strong>"+ titleAuthor +": </strong>" + author +" </li><li><strong>"+ titleLocation +": </strong>" + location +"</li><li><strong>"+ titleDate +": </strong>" + date + "</li><li><strong>"+ titleTime +": </strong>" + time + "</li><li><strong>"+ titleEquipment +": </strong>" + equipment + "</li><li><strong>"+ titleDescription +": </strong>" + description +"</li><li><strong>Download this file:</strong> "+ downloadOption +"</li></ul></div></div>";
+	infoWindowContent = "<div id=\"map_main\"><div id=\"map_title\">" + sidelink + "</div>" + image +"<div id=\"map_media\">"+ play + "</div>" + "<div id=\"map_info\"><ul><li><strong>"+ titleAuthor +": </strong>" + author +" </li><li><strong>"+ titleLocation +": </strong>" + location +"</li><li><strong>"+ titleDate +": </strong>" + date + "</li><li><strong>"+ titleTime +": </strong>" + time + "</li><li><strong>"+ titleEquipment +": </strong>" + equipment + "</li><li><strong>"+ titleDescription +": </strong>" + description +"</li><li><strong>Download this file:</strong> "+ downloadOption +"</li><li><strong>Tags:</strong> "+ downloadOption +"</li></ul></div></div>";
 
 	
 	var marker = new google.maps.Marker({
