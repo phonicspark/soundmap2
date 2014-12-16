@@ -556,7 +556,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	function soundPlayer(){
 
 		var soundPlayer = new MediaElementPlayer('#soundPlayer', {
-			pluginPath:'http://admin.portlandsoundmap.com/js/mediaelementplayer/',
+			pluginPath:'./css',
 		    success: function (mediaElement, domObject) { 
 					mediaElement.pause();
 					mediaElement.play();
