@@ -493,7 +493,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 				$("<li title="+user_id+"><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .recent ul');
 			}
 			
-			/*DATE*/
+			/*Category*/
 			var day = days[timeConverter(datetime, "day")].title;			
 			var dayClass = day.toLowerCase();
 			var dayIndex = days[timeConverter(datetime, "day")].index;
@@ -561,7 +561,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 
 
 			/*CONTRIBUTORS*/
-			var authorClass = author.toLowerCase().replace(" ","");
+			var categoryClass = category.toLowerCase().replace(" ","");
 			if(author) {
 				if($('.contributors ul ul').hasClass(authorClass)){
 					$("<li><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .contributors .'+authorClass);
@@ -927,7 +927,7 @@ function removeOverlays(){
 						<li class="liClosed">Seoul</li>						
 					</ul>
 				</li>
-				<!-- <li class="contributors liClosed">Contributors</li> -->
+				<li class="contributors liClosed">Categoryi</li> -->
 			</ul></div></div>
 	</div>
 
