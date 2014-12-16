@@ -493,7 +493,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 				$("<li title="+user_id+"><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .recent ul');
 			}
 			
-			/*Category*/
+			/*DAY*/
 			var day = days[timeConverter(datetime, "day")].title;			
 			var dayClass = day.toLowerCase();
 			var dayIndex = days[timeConverter(datetime, "day")].index;
@@ -570,6 +570,17 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 					$("<li title="+num+"><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .contributors .'+authorClass);
 				}
 			}
+			
+			/*CATEGORY*/
+			var categoryClass = category.toLowerCase().replace(" ","");
+			if(category) {
+				if($('.categorizes ul ul').hasClass(categoryClass)){
+					$("<li><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .categorizes .'+categoryClass);
+				} else {
+					$(".categorizes").append("<ul><li>"+category+" [<span class='num'></span>]<ul class="+categoryClass+"></ul></li></ul>");
+					$("<li title="+num+"><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .categorizes .'+categoryClass);
+				}
+			}
 
 			//			$('span.num').each(function(){$(this).html("test")}); // Safe.
 			$('.all ul li').tsort();
@@ -577,6 +588,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 
 			$('span.num').each(function(){$(this).html($(this).next("ul").children().size())}); // Safe.
 			$('.contributors ul ul').each(function(){$(this).parent().parent().attr('title',$(this).children().size())}); // Safe.
+			$('.categorizes ul ul').each(function(){$(this).parent().parent().attr('title',$(this).children().size())}); // Safe.
 			$('.recent ul').tsort();
 			$('.year ul').tsort();
 			$('.year ul li').tsort();
@@ -588,7 +600,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 			$('.timeofday li ul').tsort({attr:'title'});
 			
 			$('.contributors ul').tsort({attr:'title', order:'desc'},{order:'asc'});
-			
+			$('.categorizes ul').tsort({attr:'title', order:'desc'},{order:'asc'});			
 //			$('.day').click(function(){$(this).addClass('day');});
 //			$("<li><span class='link' onclick='myclick("+i+")'>"+sidelink+", "+date_link+"</span></li>").appendTo('#browse ul.mktree');
 }
@@ -928,6 +940,7 @@ function removeOverlays(){
 					</ul>
 				</li>
 				<li class="contributors liClosed">Contributors</li> -->
+			    <li class="category liClosed">category</li> -->
 			</ul></div></div>
 	</div>
 
