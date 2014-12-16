@@ -285,7 +285,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 
 	var image;
 	var file_path;
-	file_path="http://phonicspark.github.io/soundmap2";
+	file_path="http://phonicspark.github.io/soundmap2/";
 
 	var play = '<audio id="soundPlayer" src="'+file_path+'./'+soundfile+'" width="100%" height="30"></audio>';
 	var image;
@@ -294,8 +294,8 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	else image = "";
 
 	var downloadOption;
-	var mp3Download = "<img src='"+file_path+"img/"+ user_id+"\">spec1</a>";
-	var flacDownload = "<img src='"+file_path+"img/"+ user_id+".png"+"\">spec2</a> | <a href=\""+file_path+"/download.php?format=mp3&id="+ user_id+"\">mp3</a>";
+	var mp3Download = "<a href=\""+file_path+"/img/"+ user_id+"\">mp3</a>";
+	var flacDownload = "<a href=\""+file_path+"/download.php?id="+ user_id+"\">flac</a> | <a href=\""+file_path+"/download.php?format=mp3&id="+ user_id+"\">mp3</a>";
 	
 	if ( sound_ext == ".mp3" ) downloadOption = mp3Download; else downloadOption = flacDownload;
 	var category;
