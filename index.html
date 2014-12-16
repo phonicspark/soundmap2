@@ -561,7 +561,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 
 
 			/*CONTRIBUTORS*/
-			var categoryClass = category.toLowerCase().replace(" ","");
+			var authorClass = author.toLowerCase().replace(" ","");
 			if(author) {
 				if($('.contributors ul ul').hasClass(authorClass)){
 					$("<li><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .contributors .'+authorClass);
@@ -927,7 +927,7 @@ function removeOverlays(){
 						<li class="liClosed">Seoul</li>						
 					</ul>
 				</li>
-				<li class="contributors liClosed">Categoryi</li> -->
+				<li class="contributors liClosed">Contributors</li> -->
 			</ul></div></div>
 	</div>
 
