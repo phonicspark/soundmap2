@@ -650,9 +650,10 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 				var sound_ext = markerData[i][21];
 				var image_lg = markerData[i][22];
 				var image_sm = markerData[i][23];
-				var sidelink = markerData[i][24];			
+				var sidelink = markerData[i][24];
+				var tags = markerData[i][25];			
 			
-			   var marker = createMarker(encoded, latitude, longitude, type, user_id, author, sidelink, location, soundfile, download, complete, equipment, binaural, duration, image_lg, image_sm, time, date, description, sound_ext);
+			   var marker = createMarker(encoded, latitude, longitude, type, user_id, author, sidelink, location, soundfile, download, complete, equipment, binaural, duration, image_lg, image_sm, time, date, description, sound_ext, tags);
 
 
 			//				$("<li><span class='link' onclick='myclick("+i+")'>"+datetime+"</span></li>").appendTo('#browse ul.mktree');
@@ -1078,21 +1079,21 @@ function removeOverlays(){
 			<ul class="mktree" id="tree1">
 				<li class="all liOpen">All Sounds [<span class="num"></span>]<ul></ul></li>
 				<li class="recent liClosed">Recent Uploads [<span class="num"></span>]<ul></ul></li>
-				<li class="date liOpen">Categorize
+				<li class="date liOpen">Classification
 					<ul class="year">
-						<li class="liClosed">Droplet</li>
+						<li class="liClosed">Drip</li>
 					</ul>
 					<ul class="month">
 						<li class="liClosed">Pour</li>						
 					</ul>
 					<ul class="season">
-						<li class="liClosed">Waves</li>
+						<li class="liClosed">Splash</li>
 					</ul>
 			<!--<ul class="timeofday">
 						<li class="liClosed">Time of Day</li>
 					</ul>-->
 					<ul class="day">
-						<li class="liClosed">Splash</li>
+						<li class="liClosed">Ripple</li>
 					</ul>
 				</li>
 				<!-- <li class="contributors liClosed">Contributors</li> -->
