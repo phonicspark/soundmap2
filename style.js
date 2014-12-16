@@ -28,7 +28,7 @@ a:hover { text-decoration:none; }
 strong{font-weight:700;}
 /*LOGO IMAGE*/
 
-#logo { clear:both; margin-top:10px; width:790px; height:300px; margin-left:-10px; margin-right:-10px; border:5px solid #fff; background-image:url('images/logo.png'); }
+#logo { clear:both; margin-top:10px; width:790px; height:300px; margin-left:-10px; margin-right:-10px; border:5px solid #fff; background-image:url('http://phonicspark.github.io/soundmap/icon2.png'); }
 
 
 span.link { cursor:pointer; }
