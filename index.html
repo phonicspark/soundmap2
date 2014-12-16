@@ -494,6 +494,8 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 			}
 			
 			/*DAY*/
+			/*
+			
 			var day = days[timeConverter(datetime, "day")].title;			
 			var dayClass = day.toLowerCase();
 			var dayIndex = days[timeConverter(datetime, "day")].index;
@@ -581,6 +583,17 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 					$("<li title="+num+"><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .categorizes .'+categoryClass);
 				}
 			}
+			
+			/*REGION*/
+			var regionClass = region.toLowerCase().replace(" ","");
+			if(region) {
+				if($('.regions ul ul').hasClass(regionClass)){
+					$("<li><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .regions .'+regionClass);
+				} else {
+					$(".regions").append("<ul><li>"+region+" [<span class='num'></span>]<ul class="+regionClass+"></ul></li></ul>");
+					$("<li title="+num+"><span class='link sound"+user_id+"' onclick='myclick("+i+")'>"+sidelink+"</span></li>").appendTo('#browse .regions .'+regionClass);
+				}
+			}
 
 			//			$('span.num').each(function(){$(this).html("test")}); // Safe.
 			$('.all ul li').tsort();
@@ -589,6 +602,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 			$('span.num').each(function(){$(this).html($(this).next("ul").children().size())}); // Safe.
 			$('.contributors ul ul').each(function(){$(this).parent().parent().attr('title',$(this).children().size())}); // Safe.
 			$('.categorizes ul ul').each(function(){$(this).parent().parent().attr('title',$(this).children().size())}); // Safe.
+			$('.regions ul ul').each(function(){$(this).parent().parent().attr('title',$(this).children().size())}); // Safe.
 			$('.recent ul').tsort();
 			$('.year ul').tsort();
 			$('.year ul li').tsort();
@@ -600,7 +614,8 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 			$('.timeofday li ul').tsort({attr:'title'});
 			
 			$('.contributors ul').tsort({attr:'title', order:'desc'},{order:'asc'});
-			$('.categorizes ul').tsort({attr:'title', order:'desc'},{order:'asc'});			
+			$('.categorizes ul').tsort({attr:'title', order:'desc'},{order:'asc'});	
+			$('.regions ul').tsort({attr:'title', order:'desc'},{order:'asc'});			
 //			$('.day').click(function(){$(this).addClass('day');});
 //			$("<li><span class='link' onclick='myclick("+i+")'>"+sidelink+", "+date_link+"</span></li>").appendTo('#browse ul.mktree');
 }
@@ -910,37 +925,11 @@ function removeOverlays(){
 			<ul class="mktree" id="tree1">
 				<li class="all liOpen">All Sounds [<span class="num"></span>]<ul></ul></li>
 				<li class="recent liClosed">Recent Uploads [<span class="num"></span>]<ul></ul></li>
-				<li class="date liOpen">Category
-					<ul class="year">
-						<li class="liClosed">Drip</li>
-					</ul>
-					<ul class="month">
-						<li class="liClosed">Pour</li>						
-					</ul>
-					<ul class="season">
-						<li class="liClosed">Splash</li>
-					</ul>
-			<!--<ul class="timeofday">
-						<li class="liClosed">Time of Day</li>
-					</ul>-->
-					<ul class="day">
-						<li class="liClosed">Ripple</li>
-					</ul>
-				</li>
-				
-				<li class="date liOpen">Region
-					<ul class="year">
-						<li class="liClosed">Daejeon</li>
-					</ul>
-					<ul class="month">
-						<li class="liClosed">Jeju</li>						
-					</ul>
-					<ul class="month">
-						<li class="liClosed">Seoul</li>						
-					</ul>
-				</li>
-				<li class="contributors liClosed">Contributors</li> -->
-			    <li class="categorizes liClosed">category</li> -->
+			    <li class="categorizes liOpen">Category</li> -->
+			    <li class="regions liOpen">Region</li> -->				
+
+				<!-- <li class="contributors liClosed">Contributors</li> -->
+
 			</ul></div></div>
 	</div>
 
