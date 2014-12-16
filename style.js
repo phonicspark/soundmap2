@@ -130,7 +130,7 @@ i{position:relative; top:-2px; left:7px;}
 
 	#browserList{ margin-left:0px; margin-top:0px; background:#000; letter-spacing:2px; font-size:10px; overflow:auto; outline: none;  width:270px; }
 
-	span.close{ background:url('../img/close.png'); width:14px; height:14px; position:absolute;top:10px; right:10px; }
+	span.close{ background:url('http://portlandsoundmap.com/img/close.png'); width:14px; height:14px; position:absolute;top:10px; right:10px; }
 
 
 
@@ -256,7 +256,7 @@ h3{padding:0px 0px 10px 0px; margin:0px; font-size:13px;  text-transform:upperca
 #map_download { margin:5px 0px 0px 0px; text-align:center;}
 
 #bubble_arrow {
-	background-image:url('../img/bubble_arrow_wide.png');
+	background-image:url('http://portlandsoundmap.com/img/bubble_arrow_wide.png');
 	width:290px;
 	height:70px;
 	opacity:0.9;
