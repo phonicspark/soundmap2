@@ -502,12 +502,13 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	var titleEnlarge='enlarge';
 	var titleDownload='Download this file';
 	var titlePopup='Pop-up';
+	var titleCategory='Category'
 	
 	var iconType;
 	
 	if(binaural=="X") iconType = "static binaural"; else iconType = "static";
 		
-	infoWindowContent = "<div id=\"map_main\"><div id=\"map_title\">" + sidelink + "</div>" + image +"<div id=\"map_media\">"+ play + "</div>" + "<div id=\"map_info\"><ul><li><strong>"+ titleAuthor +": </strong>" + author +" </li><li><strong>"+ titleLocation +": </strong>" + location +"</li><li><strong>"+ titleDate +": </strong>" + date + "</li><li><strong>"+ titleTime +": </strong>" + time + "</li><li><strong>"+ titleEquipment +": </strong>" + equipment + "</li><li><strong>"+ titleDescription +": </strong>" + description +"</li><li><strong>Download this file:</strong> "+ downloadOption +"</li><li><strong>Tags:</strong> "+ tags +"</li></ul></div></div>";
+	infoWindowContent = "<div id=\"map_main\"><div id=\"map_title\">" + sidelink + "</div>" + image +"<div id=\"map_media\">"+ play + "</div>" + "<div id=\"map_info\"><ul><li><strong>"+ titleAuthor +": </strong>" + author +" </li><li><strong>"+ titleLocation +": </strong>" + location +"</li><li><strong>"+ titleDate +": </strong>" + date + "</li><li><strong>"+ titleTime +": </strong>" + time + "</li><li><strong>"+ titleEquipment +": </strong>" + equipment + "</li><li><strong>"+ titleDescription +": </strong>" + description +"</li><li><strong>Download this file:</strong> "+ downloadOption +"</li><li><strong>Category:</strong> "+ category +"</li></ul></div></div>";
 
 	
 	var marker = new google.maps.Marker({
@@ -651,7 +652,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 				var image_lg = markerData[i][22];
 				var image_sm = markerData[i][23];
 				var sidelink = markerData[i][24];
-				var tags = markerData[i][25];			
+				var category = markerData[i][25];			
 			
 			   var marker = createMarker(encoded, latitude, longitude, type, user_id, author, sidelink, location, soundfile, download, complete, equipment, binaural, duration, image_lg, image_sm, time, date, description, sound_ext, tags);
 
