@@ -295,7 +295,7 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 
 	var downloadOption;
 	var mp3Download = "<a href=\""+file_path+image_lg+"\">mp3</a>";
-	var flacDownload = "<a href=\""+file_path+"/download.php?id="+ user_id+"\">flac</a> | <a id="single_image" href="+file_path+image_lg+"><img src="+file_path+image_lg+" alt=""/>mp3</a>";
+	var flacDownload = "<a href=\""+file_path+"/download.php?id="+ user_id+"\">flac</a> | <a href=\""+file_path+"/download.php?format=mp3&id="+ user_id+"\">mp3</a>";
 
 	/*var downloadOption;
 	var mp3Download = "<a href=\""+file_path+"/img/"+ user_id+"\">mp3</a>";
