@@ -388,7 +388,7 @@
 .mejs-controls .mejs-volume-button .mejs-volume-slider {
 	display: none;
 	height: 115px;
-	width: 25px;
+	width: 20px;
 	background: url(background.png);
 	background: rgba(50, 50, 50, 0.7);
 	-webkit-border-radius: 0;
