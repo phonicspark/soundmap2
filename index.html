@@ -469,12 +469,12 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 
 	var image;
 	var file_path;
-	file_path="http://admin.portlandsoundmap.com";
+	file_path="http://phonicspark.github.io/soundmap2/";
 
-	var play = '<audio id="soundPlayer" src="'+file_path+'./media/audio'+soundfile+'" width="100%" height="30"></audio>';
+	var play = '<audio id="soundPlayer" src="'+file_path+'./'+soundfile+'" width="100%" height="30"></audio>';
 	var image;
 	if(image_sm=='no_photo.png') image_sm='';
-	if(image_sm!='') image = "<div id='inst_image'><img src='"+file_path+"/media/image/photo/"+image_sm+"' width='250' height='188' alt=''/></div>";
+	if(image_sm!='') image = "<div id='inst_image'><img src='"+file_path+"./"+image_sm+"' width='250' height='188' alt=''/></div>";
 	else image = "";
 
 	var downloadOption;
