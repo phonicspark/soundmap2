@@ -941,11 +941,11 @@ function soundtrackRand() {
 
 
 function resetZoom(){
-	map.setZoom(11);
+	map.setZoom(12);
 }
 
 function resetMap(){
-  map.setZoom(15);
+  map.setZoom(12);
 	if(curMarker){
 		map.panTo(curMarker.position);
 		map.panBy(160,-260);
@@ -1018,7 +1018,7 @@ function removeOverlays(){
 
 		<ul class="dropdownMenu left">
 			<li><span id="aboutLink" class="overlayLink link caps" onclick="toggleAbout();"><strong>About</strong><!--<i class="icon-white icon-info-sign"></i>--></span>
-			<li><span id="contributeLink" class="overlayLink link caps" onclick="toggleContribute();"><strong>Upload</strong><!--<i class="icon-white icon-upload"></i>--></li>
+			<!-- <li><span id="contributeLink" class="overlayLink link caps" onclick="toggleContribute();"><strong>Upload</strong><!--<i class="icon-white icon-upload"></i>--></li>
 			<!-- <li><span style="margin: 0px 5px 0px 2px; border-left:1px solid #777;"></span></li>
 			<!-- <li><span id="autoplay" class="link caps" onclick="autoplayMap();"><strong>Autoplay</strong><!--<i class="icon-white icon-play"></i>--></span></li>
 			<!-- <li><span id="shuffle" class="link caps" onclick="soundtrackRand();"><strong>Shuffle</strong><!--<i class="icon-white icon-random"></i>--></span></li>
