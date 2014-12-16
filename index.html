@@ -294,8 +294,13 @@ function createMarker(encoded, latitude, longitude, type, user_id, author, sidel
 	else image = "";
 
 	var downloadOption;
+	var mp3Download = "<div id='inst_image'><img src='"+file_path+"./"+image_lg+"' width='250' height='188' alt=''/>mp3</div>";
+	var flacDownload = "<a href=\""+file_path+"/download.php?id="+ user_id+"\">flac</a> | <a href=\""+file_path+"/download.php?format=mp3&id="+ user_id+"\">mp3</a>";
+
+	/*var downloadOption;
 	var mp3Download = "<a href=\""+file_path+"/img/"+ user_id+"\">mp3</a>";
 	var flacDownload = "<a href=\""+file_path+"/download.php?id="+ user_id+"\">flac</a> | <a href=\""+file_path+"/download.php?format=mp3&id="+ user_id+"\">mp3</a>";
+	*/
 	
 	if ( sound_ext == ".mp3" ) downloadOption = mp3Download; else downloadOption = flacDownload;
 	var category;
