@@ -48,7 +48,7 @@ li { margin-bottom:10px; }
 
 #map { height: 100%; width:100%; }
 
-#topTitle{font-family:'Arvo'; font-size:15px; letter-spacing:0px; float:left; background:url('../img/sine_top_invert_20.png') no-repeat center right; height:20px; padding-right:35px; margin-right:20px;}
+#topTitle{font-family:'Arvo'; font-size:15px; letter-spacing:0px; float:left; background:url('http://phonicspark.github.io/soundmap/icon2.png') no-repeat center right; height:20px; padding-right:35px; margin-right:20px;}
 
 #top { position:fixed;  padding:6px 10px; top:0px; left:0px; width:100%; min-width:800px; color:#fff;  height:20px; background:rgba(0,0,0,0.9); letter-spacing:2px; line-height:20px;  }
 /*#top { position:fixed; padding:7px 10px 5px 10px; top:0px; left:0px; width:100%; min-width:1000px; opacity:0.6; color:#000; height:14px; background:#fff;}*/
